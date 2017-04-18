@@ -1,9 +1,14 @@
-# api documentation for  [idb (v2.0.1)](https://github.com/jakearchibald/indexeddb-promised#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-idb.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-idb) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-idb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-idb)
+# npmdoc-idb
+
+#### api documentation for  [idb (v2.0.1)](https://github.com/jakearchibald/indexeddb-promised#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-idb.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-idb) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-idb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-idb)
+
 #### IndexedDB but with promises
 
-[![NPM](https://nodei.co/npm/idb.png?downloads=true)](https://www.npmjs.com/package/idb)
+[![NPM](https://nodei.co/npm/idb.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/idb)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-idb/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-idb_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-idb/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-idb/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-idb/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-idb/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-idb/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-idb/build/screenCapture.npmPackageListing.svg)
 
@@ -55,13 +60,11 @@
     "main": "lib/node.js",
     "maintainers": [
         {
-            "name": "jaffathecake",
-            "email": "jaffathecake@gmail.com"
+            "name": "jaffathecake"
         }
     ],
     "name": "idb",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/jakearchibald/indexeddb-promised.git"
@@ -73,75 +76,6 @@
     "typings": "lib/idb.d.ts",
     "version": "2.0.1"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module idb](#apidoc.module.idb)
-1.  [function <span class="apidocSignatureSpan">idb.</span>delete ()](#apidoc.element.idb.delete)
-1.  [function <span class="apidocSignatureSpan">idb.</span>open ()](#apidoc.element.idb.open)
-
-
-
-# <a name="apidoc.module.idb"></a>[module idb](#apidoc.module.idb)
-
-#### <a name="apidoc.element.idb.delete"></a>[function <span class="apidocSignatureSpan">idb.</span>delete ()](#apidoc.element.idb.delete)
-- description and source-code
-```javascript
-delete = function () {
-  return Promise.reject('IDB requires a browser environment');
-}
-```
-- example usage
-```shell
-...
-    tx.objectStore('keyval').put(val, key);
-    return tx.complete;
-  });
-},
-delete(key) {
-  return dbPromise.then(db => {
-    const tx = db.transaction('keyval', 'readwrite');
-    tx.objectStore('keyval').delete(key);
-    return tx.complete;
-  });
-},
-clear() {
-  return dbPromise.then(db => {
-    const tx = db.transaction('keyval', 'readwrite');
-    tx.objectStore('keyval').clear();
-...
-```
-
-#### <a name="apidoc.element.idb.open"></a>[function <span class="apidocSignatureSpan">idb.</span>open ()](#apidoc.element.idb.open)
-- description and source-code
-```javascript
-open = function () {
-  return Promise.reject('IDB requires a browser environment');
-}
-```
-- example usage
-```shell
-...
-# Examples
-
-## Keyval Store
-
-This is very similar to 'localStorage', but async. If this is *all* you need, you may be interested in [idb-keyval](https://www.
-npmjs.com/package/idb-keyval), you can always upgrade to this library later.
-
-'''js
-const dbPromise = idb.open('keyval-store', 1, upgradeDB => {
-upgradeDB.createObjectStore('keyval');
-});
-
-const idbKeyval = {
-get(key) {
-  return dbPromise.then(db => {
-    return db.transaction('keyval')
-...
 ```
 
 
