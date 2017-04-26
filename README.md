@@ -1,6 +1,6 @@
 # npmdoc-idb
 
-#### api documentation for  [idb (v2.0.1)](https://github.com/jakearchibald/indexeddb-promised#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-idb.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-idb) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-idb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-idb)
+#### basic api documentation for  [idb (v2.0.1)](https://github.com/jakearchibald/indexeddb-promised#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-idb.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-idb) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-idb.svg)](https://travis-ci.org/npmdoc/node-npmdoc-idb)
 
 #### IndexedDB but with promises
 
@@ -74,7 +74,8 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "typings": "lib/idb.d.ts",
-    "version": "2.0.1"
+    "version": "2.0.1",
+    "bin": {}
 }
 ```
 
