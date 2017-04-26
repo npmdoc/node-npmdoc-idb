@@ -74,32 +74,6 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.idb.delete">module idb.delete</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.idb.delete.delete">
-            function <span class="apidocSignatureSpan">idb.</span>delete
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.idb.open">module idb.open</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.idb.open.open">
-            function <span class="apidocSignatureSpan">idb.</span>open
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -139,79 +113,6 @@ clear() {
 
     <h2>
         <a href="#apidoc.element.idb.open" id="apidoc.element.idb.open">
-        function <span class="apidocSignatureSpan">idb.</span>open
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">open = function () {
-  return Promise.reject('IDB requires a browser environment');
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-# Examples
-
-## Keyval Store
-
-This is very similar to `localStorage`, but async. If this is *all* you need, you may be interested in [idb-keyval](https://www.
-npmjs.com/package/idb-keyval), you can always upgrade to this library later.
-
-```js
-const dbPromise = idb.<span class="apidocCodeKeywordSpan">open</span>('keyval-store', 1, upgradeDB =&gt; {
-upgradeDB.createObjectStore('keyval');
-});
-
-const idbKeyval = {
-get(key) {
-  return dbPromise.then(db =&gt; {
-    return db.transaction('keyval')
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.idb.delete" id="apidoc.module.idb.delete">module idb.delete</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.idb.delete.delete" id="apidoc.element.idb.delete.delete">
-        function <span class="apidocSignatureSpan">idb.</span>delete
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">delete = function () {
-  return Promise.reject('IDB requires a browser environment');
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-    tx.objectStore('keyval').put(val, key);
-    return tx.complete;
-  });
-},
-delete(key) {
-  return dbPromise.then(db =&gt; {
-    const tx = db.transaction('keyval', 'readwrite');
-    tx.objectStore('keyval').<span class="apidocCodeKeywordSpan">delete</span>(key);
-    return tx.complete;
-  });
-},
-clear() {
-  return dbPromise.then(db =&gt; {
-    const tx = db.transaction('keyval', 'readwrite');
-    tx.objectStore('keyval').clear();
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.idb.open" id="apidoc.module.idb.open">module idb.open</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.idb.open.open" id="apidoc.element.idb.open.open">
         function <span class="apidocSignatureSpan">idb.</span>open
         <span class="apidocSignatureSpan">()</span>
         </a>
